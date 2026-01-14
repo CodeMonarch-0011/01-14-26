@@ -1,0 +1,766 @@
+.home-page {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding: 160px 80px;
+  /* background: linear-gradient(#212121 50%, rgb(172, 53, 53, 0.2)); */
+  /* background-color: rgb(42, 42, 42); */
+  /* color: white; */
+}
+
+.banner-text {
+  width: 88%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.banner-text > span:first-child {
+  font-size: clamp(1.8rem, 3.6vw, 3.4rem);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.banner-text > span:nth-child(2) {
+  font-size: clamp(1rem, 1.19vw, 1.125rem);
+  font-weight: 400;
+}
+
+.banner-text > button {
+  font-size: clamp(0.88rem, 1vw, 1.125rem);
+  cursor: pointer;
+  width: fit-content;
+  padding: 16px 60px;
+  border: none;
+  color: white;
+  font-family: OpenSans;
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+.banner-img {
+  width: 100%;
+  inset: 0;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-img > img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 100%;
+  /* top: 50%; */
+  /* translate: 0 -25%; */
+  filter: brightness(0.7);
+  position: absolute;
+
+  animation: brighten 0.6s ease-in;
+}
+
+@keyframes brighten {
+  from {
+    filter: brightness(0);
+  }
+}
+
+.biography,
+.rise,
+.rise-to-prominence,
+.personal-life,
+.creative-style,
+.filmography,
+.looking-ahead {
+  padding: 80px 9.6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.personal-life-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+}
+
+.personal-life-txt > span:nth-child(1),
+.personal-life-txt > span:nth-child(3) {
+  text-align: center;
+  width: 80%;
+}
+
+.personal-life-text-mid {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.personal-life-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  width: 50%;
+}
+
+.personal-life-img {
+  width: 40%;
+  min-height: 260px;
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+  background-color: grey;
+  overflow: hidden;
+  position: relative;
+}
+
+.personal-life-img img {
+  width: 100%;
+  top: 50%;
+  translate: 0 -40%;
+  position: absolute;
+}
+
+.biography {
+  align-items: flex-start;
+}
+
+.rise-main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rise-txt {
+  width: 50%;
+}
+
+.rise-main img {
+  width: 45%;
+  object-fit: cover;
+  max-height: 100%;
+  height: 100%;
+}
+
+.rise div,
+.rise span {
+  position: relative;
+  z-index: 1;
+}
+
+.creative-style-hdr,
+.biography-hdr,
+.rise-hdr,
+.rise-to-prominence-hdr,
+.film-work-hdr,
+.philosophy-hdr,
+.personal-life-hdr,
+.legacy-hdr,
+.filmography-hdr,
+.looking-ahead-hdr {
+  font-size: clamp(0.8rem, 0.88vw, 0.92rem);
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.biography-txt,
+.creative-style,
+.film-work-cnt-main,
+.rise-txt,
+.rise-main-extra,
+.rise-to-prominence-txt,
+.rise-to-prominence-list,
+.rise-to-prominence-extra,
+.film-work-txt,
+.personal-life-txt,
+.looking-ahead-txt {
+  text-align: center;
+  font-size: clamp(1rem, 1.19vw, 1.125rem);
+  font-weight: 400;
+}
+
+.creative-style-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.creative-style-main-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: space-around;
+}
+
+.creative-style-card {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.creative-style-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.creative-style-card-content > span:first-child,
+.film-work-list-card > div:first-child {
+  font-style: italic;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.creative-style-card-content > span:last-child,
+.film-work-list-card > div:last-child {
+  font-size: 0.94rem;
+}
+
+.rise-main-extra {
+  text-align: left;
+}
+
+.rise-main-img {
+  width: 45%;
+  /* height: 100%; */
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+  background-color: grey;
+  position: relative;
+  overflow: hidden;
+}
+
+.rise-main-img img {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+
+  min-height: 100%;
+}
+
+.biography-txt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  gap: 12px;
+  row-gap: 28px;
+}
+
+.biography-txt-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: grey;
+  overflow: hidden;
+}
+
+.biography-txt-img img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  translate: 0 -10%;
+  object-fit: cover;
+  /* height: 100%; */
+}
+
+.rise-txt {
+  text-align: left;
+}
+
+.rise {
+  overflow: hidden;
+}
+
+.rise-to-prominence,
+.personal-life,
+.filmography {
+  background-color: var(--secondary);
+  color: white;
+  color: var(--text);
+}
+
+.rise-to-prominence-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rise-to-prominence-card {
+  width: 28%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pointer {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  /* background-color: white; */
+}
+
+.rise-to-prominence-card > div:nth-child(2) {
+  font-weight: 600;
+}
+
+/* .rise-to-prominence-card > div:nth-child(3) {
+} */
+
+.film-work,
+.philosophy,
+.legacy {
+  padding: 60px 120px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.film-work {
+  align-items: center;
+}
+
+.film-work-txt {
+  text-align: left;
+}
+
+.film-work-cnt-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.film-work-cnt {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.film-work-list {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  gap: 24px;
+}
+
+.philosophy-list {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.philosophy-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.philosophy-img {
+  width: 45%;
+  min-height: 260px;
+  background-color: gray;
+  margin-top: 0 auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0 auto;
+}
+
+.philosophy-img img {
+  position: absolute;
+  width: 100%;
+}
+
+.philosophy-list {
+  width: 42%;
+}
+
+.philosophy {
+  background-color: var(--secondary);
+  background-color: var(--bg);
+}
+
+.legacy-img {
+  width: 40.8%;
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+  background-color: rgb(182, 182, 182);
+  overflow: hidden;
+  position: relative;
+}
+
+.film-work-cnt-img > img,
+.legacy-img > img {
+  min-width: 100%;
+  object-position: 0 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.legacy-img > img {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  translate: 0 -10%;
+}
+
+.film-work-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 45%;
+  /* align-items: center; */
+  text-align: left;
+  /* text-align: center; */
+}
+
+.film-work-list-card-hdr {
+  display: flex;
+  align-items: center;
+  /* gap: 12px; */
+}
+
+.film-work-list-card-hdr > span {
+  font-weight: 600;
+}
+
+.film-work-list-card-txt {
+  width: 100%;
+}
+
+.personal-life-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.personal-life button {
+  font-size: clamp(0.88rem, 1vw, 1.125rem);
+  cursor: pointer;
+  width: fit-content;
+  padding: 16px 60px;
+  border: none;
+  /* background-color: white; */
+  font-family: OpenSans;
+  color: var(--primary);
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.legacy {
+  gap: 20px;
+}
+
+.legacy-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.legacy-main-txt {
+  width: 54.5%;
+  font-size: clamp(1rem, 1.19vw, 1.125rem);
+}
+
+.filmography-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+  grid-row-gap: 32px;
+}
+
+.filmography-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(1rem, 1.19vw, 1.125rem);
+}
+
+.filmography-card-topic {
+  font-weight: 600px;
+}
+
+.looking-ahead {
+  padding: 80px 16%;
+}
+
+.looking-ahead > div:nth-child(2) ul {
+  gap: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.looking-ahead > div:nth-child(2) li {
+  list-style-type: none;
+  position: relative;
+}
+
+.looking-ahead > div:nth-child(2) li::before {
+  width: 6px;
+  height: 6px;
+  rotate: 45deg;
+  /* border-radius: 50%; */
+  background-color: white;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  translate: -50% -150%;
+}
+
+.looking-ahead > button {
+  font-size: clamp(0.96rem, 1vw, 1.125rem);
+  cursor: pointer;
+  width: fit-content;
+  padding: 16px 60px;
+  border: none;
+  color: white;
+  font-family: OpenSans;
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    padding: 128px 28px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .banner-text {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: white;
+  }
+
+  .banner-img {
+    width: 100%;
+    left: 0;
+    height: 100%;
+    filter: brightness(0.7);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .biography,
+  .rise,
+  .rise-to-prominence,
+  .personal-life,
+  .filmography,
+  .looking-ahead,
+  .philosophy {
+    padding: 40px 28px;
+    gap: 20px;
+  }
+
+  .biography-txt {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .biography-txt-img {
+    height: 240px;
+  }
+
+  .rise-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rise-main-img {
+    width: 100%;
+    height: 200px;
+    margin-top: unset;
+    margin-top: unset;
+  }
+
+  .rise-main-img > img {
+    position: relative;
+    width: 100%;
+
+    object-position: 0 10%;
+    height: 120px !important;
+  }
+
+  .creative-style-card {
+    width: 80%;
+  }
+
+  .film-work {
+    /* background-color: rgb(39, 38, 38); */
+  }
+
+  .personal-life-text-mid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .personal-life-list,
+  .personal-life-img {
+    width: 100%;
+  }
+
+  .personal-life-img {
+    height: 200px;
+    min-height: unset;
+  }
+
+  .rise-txt {
+    width: 100%;
+  }
+
+  .philosophy-list {
+    width: 100%;
+  }
+
+  .rise-main > img {
+    width: 100%;
+    position: relative;
+    height: 200px;
+    object-position: 0% 0%;
+    /* translate: -50% -35%; */
+  }
+
+  .rise-to-prominence-list {
+    flex-direction: column;
+    width: 100%;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .personal-life-txt,
+  .looking-ahead-txt,
+  .looking-ahead > div:nth-child(2) {
+    text-align: left;
+  }
+
+  .looking-ahead-txt,
+  .looking-ahead > div:nth-child(2) {
+    text-align: center;
+  }
+
+  .looking-ahead-txt {
+    font-style: italic;
+  }
+
+  .rise-to-prominence-card {
+    width: 100%;
+  }
+
+  .rise-to-prominence-list li {
+    list-style-type: none;
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .rise-to-prominence-list ul li:first-child {
+    margin-top: 12px;
+  }
+
+  .rise-to-prominence-list li::before {
+    width: 6px;
+    height: 6px;
+    rotate: 45deg;
+    /* border-radius: 50%; */
+    background-color: white;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    translate: -50% -150%;
+  }
+
+  .film-work,
+  .legacy {
+    padding: 40px 28px;
+  }
+
+  .film-work-cnt,
+  .legacy-main {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .film-work-list {
+    width: 100%;
+  }
+
+  .film-work-list-card,
+  .film-work-list-card-txt,
+  .legacy-main-txt {
+    width: 100%;
+  }
+
+  .film-work-cnt-img,
+  .legacy-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .legacy-img {
+    height: 280px;
+  }
+
+  .legacy-img > img {
+    min-height: 100%;
+    translate: 0;
+    object-position: center center;
+  }
+
+  .filmography-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .philosophy-main {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .philosophy-img,
+  .philosophy-list {
+    width: 100%;
+  }
+
+  .philosophy-img {
+    height: 200px;
+    display: none;
+  }
+}
